@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plaza Center Hotel | São Lourenço do Sul - RS</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#d4af37', /* Gold */
+                            DEFAULT: '#b5952f',
+                            dark: '#1e293b', /* Navy dark */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background-image: url('https://placehold.co/1920x1080/1e293b/ffffff?text=Fachada+do+Hotel');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="#" class="font-serif text-2xl font-bold text-brand-dark tracking-wider flex items-center gap-2">
+                        <i class="fa-solid fa-hotel text-brand"></i>
+                        PLAZA CENTER
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-gray-600 hover:text-brand transition-colors font-medium">Início</a>
+                    <a href="#acomodacoes" class="text-gray-600 hover:text-brand transition-colors font-medium">Acomodações</a>
+                    <a href="#servicos" class="text-gray-600 hover:text-brand transition-colors font-medium">Serviços</a>
+                    <a href="#sobre" class="text-gray-600 hover:text-brand transition-colors font-medium">Sobre</a>
+                    <a href="#contatos" class="px-5 py-2 bg-brand text-white rounded-md hover:bg-yellow-600 transition-colors shadow-md font-medium">Reservar</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-brand focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#inicio" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand hover:bg-gray-50 rounded-md">Início</a>
+                <a href="#acomodacoes" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand hover:bg-gray-50 rounded-md">Acomodações</a>
+                <a href="#servicos" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand hover:bg-gray-50 rounded-md">Serviços</a>
+                <a href="#sobre" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand hover:bg-gray-50 rounded-md">Sobre</a>
+                <a href="#contatos" class="block mt-4 text-center px-3 py-3 bg-brand text-white font-medium rounded-md shadow-md">Reservar Agora</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative pt-20 h-screen min-h-[600px] flex items-center justify-center hero-bg">
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        
+        <!-- Content -->
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
+            <p class="text-brand-light font-semibold tracking-widest uppercase mb-3 text-sm sm:text-base">Sua casa no sul do Brasil</p>
+            <h1 class="text-4xl sm:text-5xl md:text-7xl font-serif font-bold text-white mb-6 drop-shadow-lg">
+                Bem-vindo ao<br>Plaza Center Hotel
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-200 mb-10 font-light max-w-2xl mx-auto">
+                Conforto, elegância e o melhor atendimento em São Lourenço do Sul. Viva momentos inesquecíveis conosco.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#acomodacoes" class="px-8 py-4 bg-brand text-white font-medium rounded-md hover:bg-yellow-600 transition-all shadow-lg text-lg">
+                    Reservar Agora
+                </a>
+                <a href="#sobre" class="px-8 py-4 bg-transparent border border-white text-white font-medium rounded-md hover:bg-white hover:text-brand-dark transition-all text-lg">
+                    Conheça o Hotel
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Acomodações Section -->
+    <section id="acomodacoes" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-dark mb-4">Nossas Acomodações</h2>
+                <div class="h-1 w-20 bg-brand mx-auto mb-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">Ambientes projetados para o seu máximo conforto e descanso após um longo dia de passeios ou trabalho.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Card 1 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg group hover:shadow-2xl transition-all duration-300">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://placehold.co/800x600/cbd5e1/1e293b?text=Quarto+Standard" alt="Quarto Standard" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-brand text-white text-sm font-bold px-3 py-1 rounded">A partir de R$ 180</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-serif font-bold text-brand-dark mb-3">Quarto Standard</h3>
+                        <p class="text-gray-600 mb-6 line-clamp-3">Aconchegante e prático, ideal para casais ou viajantes a negócios. Equipado com cama box, ar-condicionado, frigobar e TV tela plana. O melhor custo-benefício da região.</p>
+                        <ul class="flex flex-wrap gap-4 text-gray-500 text-sm mb-6 border-b border-gray-200 pb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-bed"></i> Cama Casal</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-snowflake"></i> Ar-cond.</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-tv"></i> Smart TV</li>
+                        </ul>
+                        <button class="w-full py-3 border-2 border-brand text-brand font-semibold rounded hover:bg-brand hover:text-white transition-colors">Ver Detalhes</button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-lg group hover:shadow-2xl transition-all duration-300">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://placehold.co/800x600/94a3b8/1e293b?text=Suite+Master" alt="Suíte Master" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-brand text-white text-sm font-bold px-3 py-1 rounded">A partir de R$ 320</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-serif font-bold text-brand-dark mb-3">Suíte Master</h3>
+                        <p class="text-gray-600 mb-6 line-clamp-3">Nossa acomodação mais espaçosa e luxuosa. Perfeita para ocasiões especiais. Conta com cama king size, banheira de hidromassagem, varanda privativa e decoração premium.</p>
+                        <ul class="flex flex-wrap gap-4 text-gray-500 text-sm mb-6 border-b border-gray-200 pb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-crown"></i> Cama King</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-bath"></i> Banheira</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-wine-glass"></i> Varanda</li>
+                        </ul>
+                        <button class="w-full py-3 border-2 border-brand text-brand font-semibold rounded hover:bg-brand hover:text-white transition-colors">Ver Detalhes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="py-20 bg-brand-dark text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Serviços e Facilidades</h2>
+                <div class="h-1 w-20 bg-brand mx-auto mb-4"></div>
+                <p class="text-gray-300 max-w-2xl mx-auto text-lg">Tudo o que você precisa para uma estadia tranquila e sem preocupações.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Servico 1 -->
+                <div class="text-center p-6 rounded-lg bg-gray-800 border border-gray-700 hover:border-brand transition-colors">
+                    <div class="w-16 h-16 mx-auto bg-gray-700 rounded-full flex items-center justify-center mb-4 text-brand text-2xl">
+                        <i class="fa-solid fa-wifi"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Wi-Fi Grátis</h3>
+                    <p class="text-gray-400 text-sm">Internet de alta velocidade em todos os ambientes do hotel, ideal para trabalho ou lazer.</p>
+                </div>
+                
+                <!-- Servico 2 -->
+                <div class="text-center p-6 rounded-lg bg-gray-800 border border-gray-700 hover:border-brand transition-colors">
+                    <div class="w-16 h-16 mx-auto bg-gray-700 rounded-full flex items-center justify-center mb-4 text-brand text-2xl">
+                        <i class="fa-solid fa-mug-hot"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Café da Manhã</h3>
+                    <p class="text-gray-400 text-sm">Delicioso buffet colonial incluso na diária, com pães artesanais, frutas e sucos naturais.</p>
+                </div>
+
+                <!-- Servico 3 -->
+                <div class="text-center p-6 rounded-lg bg-gray-800 border border-gray-700 hover:border-brand transition-colors">
+                    <div class="w-16 h-16 mx-auto bg-gray-700 rounded-full flex items-center justify-center mb-4 text-brand text-2xl">
+                        <i class="fa-solid fa-car"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Estacionamento</h3>
+                    <p class="text-gray-400 text-sm">Vagas seguras e monitoradas 24h para o seu veículo, sem custo adicional.</p>
+                </div>
+
+                <!-- Servico 4 -->
+                <div class="text-center p-6 rounded-lg bg-gray-800 border border-gray-700 hover:border-brand transition-colors">
+                    <div class="w-16 h-16 mx-auto bg-gray-700 rounded-full flex items-center justify-center mb-4 text-brand text-2xl">
+                        <i class="fa-solid fa-bell-concierge"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Recepção 24h</h3>
+                    <p class="text-gray-400 text-sm">Nossa equipe está sempre disponível para lhe atender a qualquer hora do dia ou da noite.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <img src="https://placehold.co/800x600/e2e8f0/1e293b?text=Recepcao+e+Lobby" alt="Recepção do Hotel" class="rounded-xl shadow-xl w-full h-auto object-cover">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-brand-dark mb-4">Tradição e Hospitalidade no coração de São Lourenço</h2>
+                    <div class="h-1 w-20 bg-brand mb-6"></div>
+                    <p class="text-gray-600 mb-4 text-lg">
+                        Localizado em São Lourenço do Sul - RS, o Plaza Center Hotel nasceu com a missão de oferecer uma experiência de hospedagem acolhedora e de excelência. 
+                    </p>
+                    <p class="text-gray-600 mb-8 text-lg">
+                        Seja para desfrutar das belas praias da Lagoa dos Patos, fechar grandes negócios ou apenas relaxar, nossa infraestrutura moderna e equipe dedicada garantem que sua estadia seja inesquecível.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <h4 class="font-bold text-4xl text-brand mb-1">15+</h4>
+                            <p class="text-sm text-gray-500 font-semibold uppercase">Anos de Tradição</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-4xl text-brand mb-1">5k+</h4>
+                            <p class="text-sm text-gray-500 font-semibold uppercase">Hóspedes Satisfeitos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contatos Section -->
+    <footer id="contatos" class="bg-gray-900 pt-16 pb-8 border-t-4 border-brand">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 border-b border-gray-800 pb-12">
+                
+                <!-- Brand Info -->
+                <div>
+                    <a href="#" class="font-serif text-2xl font-bold text-white tracking-wider flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-hotel text-brand"></i>
+                        PLAZA CENTER
+                    </a>
+                    <p class="text-gray-400 mb-6 text-sm">
+                        O seu refúgio de conforto e tranquilidade na Pérola da Lagoa. Esperamos por você em São Lourenço do Sul.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-brand hover:text-white transition-colors">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-brand hover:text-white transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-brand hover:text-white transition-colors">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#inicio" class="hover:text-brand transition-colors">Página Inicial</a></li>
+                        <li><a href="#acomodacoes" class="hover:text-brand transition-colors">Nossas Acomodações</a></li>
+                        <li><a href="#servicos" class="hover:text-brand transition-colors">Serviços Inclusos</a></li>
+                        <li><a href="#sobre" class="hover:text-brand transition-colors">Sobre o Hotel</a></li>
+                        <li><a href="#" class="hover:text-brand transition-colors">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Fale Conosco</h3>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-brand"></i>
+                            <span>Rua Júlio de Castilhos, 123 - Centro<br>São Lourenço do Sul - RS, 96170-000</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-brand"></i>
+                            <span>(53) 3251-0000</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-brand"></i>
+                            <span>(53) 99999-0000 <span class="text-xs bg-gray-700 px-2 py-1 rounded ml-1">Reservas</span></span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-brand"></i>
+                            <span>contato@plazacenterhotel.com.br</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center text-gray-500 text-sm">
+                <p>&copy; 2026 Plaza Center Hotel. Todos os direitos reservados.</p>
+                <p class="mt-2 text-xs">Desenvolvido como Projeto Extensionista de Ciência da Computação (Instituição Cogna).</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
